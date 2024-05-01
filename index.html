@@ -1,0 +1,738 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Global Maná</title>
+    <link rel="icon" href="./img/Logo2.png" type="image/x-icon">
+    <link rel="stylesheet" href="./css/normalize.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+</head>
+
+<body x-data="navFunc()" x-init="showNav('ini')">
+
+
+    <header class="hero">
+            <section class="s-container-carousel">
+        
+                
+                    <div class="s-carruseles" id="slider">
+                        <section class="s-slider-section">
+                            <div style="height: 100%;">
+                                <img src="img/container-ship-596083_1280.jpg">                   
+                            </div>       
+                        </section>
+                        <section class="s-slider-section">                   
+                            <div style="height: 100%;">
+                                <img src="img/port-7018181_1280.jpg">
+                            </div>
+                        </section>
+                    </div>
+                    <div style="position: absolute; top: 0%; width: 100%; display: flex; height: 100%; flex-direction: column; justify-content: space-between;"  > 
+                        <div class="logo-imagen-global" style="">
+                            <img style="height: auto;width: 70px;border-radius: 50%; box-shadow: 2px 2px 5px rgb(0 0 0 / 36%);" src="./img/Logo2.png" alt="Logo Global Mana">
+                            <p>Global Maná C.A</p>
+                        </div>
+                        <div class="logo-WS-header">
+                            <a class="ws" href="https://wa.me/584242480644" class="" target="_blank">
+                                <i class="fa-brands fa-whatsapp"></i>              
+                              </a>
+                              <a class="tl" href="">
+                                <i class="fa-solid fa-phone"></i>
+                              </a>
+                              <p>+58 4242480644</p>
+                        </div>
+                    </div>
+                    <div class="s-btn-left"><i class='bx bx-chevron-left'></i></div>
+                    <div class="s-btn-right"><i class='bx bx-chevron-right'></i></div>    
+            </section>
+            <div class="contenedor-L">
+  
+                <ul>
+                 <li>Importación</li>
+                 <li>Exportación</li>
+                 <li>Distribución</li>
+                 <li>Suministro de Alimentos</li>
+                 <li>Alimentos Importados</li>
+                 <li>Alimentos Nacionales</li>
+                 <li>Las mejores Garantías</li>         
+                 <li>El mejor Servicio</li>         
+              </ul>
+             
+            </div>
+    </header>
+
+    <main>
+
+        <section class="nav-main">
+            <nav class="nav">
+                <a style="cursor: pointer;" x-on:click="showNav('ini')" class="nav_items"
+                    x-bind:class="{ 'active': ini }">Inicio</a>
+                <a style="cursor: pointer;" x-on:click="showNav('sob')" class="nav_items"
+                    x-bind:class="{ 'active': sob }">Sobre Nosotros</a>
+                <a style="cursor: pointer;" x-on:click="showNav('cta')" class="nav_items"
+                    x-bind:class="{ 'active': cta }">Contacto</a>
+                <a style="cursor: pointer;" x-on:click="showNav('serv')" class="nav_items"
+                    x-bind:class="{ 'active': serv }">Servicios</a>
+            </nav>
+        </section>
+
+
+        <div x-show="ini">
+            <section id="ini">
+                <!-- Contenido de la sección "ini" -->
+                <div class="projects">
+                    <div class="container">
+                        <div class="projects_grid">
+                            <div class="projects_item">
+
+                                <img src="./img/cafe.png" class="projects_img">
+
+                            </div>
+
+                            <div class="projects_item">
+                                <img src="./img/azucar.png" class="projects_img">
+                            </div>
+
+                            <div class="projects_item">
+                                <img src="./img/arroz.png" class="projects_img">
+
+                            </div>
+
+                            <div class="projects_item">
+                                <img src="./img/carne-de-cerdo.png" class="projects_img">
+
+                            </div>
+
+                            <div class="projects_item">
+                                <img src="./img/galeria-contruimosEl.png" class="projects_img">
+
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="calidad">
+                    <div class="slider">
+                        <div class="slide">
+                            <img src="./img/CompromisoCal.png"
+                                alt="Photo1" />
+                        </div>
+                        <div class="slide">
+                            <img src="./img/AlimentandoCal.png"
+                                alt="Photo3" />
+                        </div>
+                        <div class="slide">
+                            <img src="./img/CompromisoCal.png"
+                                alt="Photo2" />
+                        </div>
+                        <div class="slide">
+                            <img src="./img/AlimentandoCal.png"
+                                alt="Photo4" />
+                        </div>
+
+                        <button class="btn-slide prev"><i class="fas fa-3x fa-chevron-circle-left"></i></button>
+                        <button class="btn-slide next"><i class="fas fa-3x fa-chevron-circle-right"></i></button>
+
+                    </div>
+                    <div class="dots-container">
+                        <span class="dot active" data-slide="0"></span>
+                        <span class="dot" data-slide="1"></span>
+                        <span class="dot" data-slide="2"></span>
+                        <span class="dot" data-slide="3"></span>
+                    </div>
+                </div>
+
+
+                <div class="blog">
+                    <div class="our_blog container">
+                        <div class="container_cards_blog">
+                            <div class="card_blog" x-on:click="showNav('cta'); scrollTo('cta',80)"
+                                x-bind:class="{ 'active': cta }">
+                                <div class="img_card_blog">
+                                    <img src="./img/Ubicacion2.PNG" alt="">
+                                </div>
+                                <div class="text_card_blog">
+                                    <h3 class="title_cards_blog">Inversiones Global Maná</h3>
+                                    <span>Ubícanos
+                                    </span>
+                                    <p>
+                                        Av. Pedro Russo Ferrer con Av. Carlos Domínguez, Galpón 36, Zona Industrial
+                                        El
+                                        Tambor,
+                                        Los Teques Edo. Miranda.
+                                    </p>
+                                    <a style="cursor: pointer;" x-on:click="showNav('cta'); scrollTo('cta',80)"
+                                        x-bind:class="{ 'active': cta }" class="read_more">Ver más...</a>
+                                </div>
+                            </div>
+                            <div class="card_blog" x-on:click="showNav('serv'); scrollTo('serv',80)"
+                                x-bind:class="{ 'active': sob }">
+                                <div class="img_card_blog">
+                                    <img src="./img/2.png" alt="">
+                                </div>
+                                <div class="text_card_blog">
+
+                                    <h3 class="title_cards_blog">Nuestros Servicios</h3>
+
+                                    <p>
+                                        Importación, Exportación (Distintos Paises),
+                                        Logística y Distribución y
+                                        Servicios Portuarios.
+                                    </p>
+
+                                    <a style="cursor: pointer;" x-on:click="showNav('serv')"
+                                        x-bind:class="{ 'active': serv }" class="read_more">Ver más...</a>
+                                </div>
+                            </div>
+                            <div class="card_blog" x-on:click="showNav('sob'); scrollTo('sob',80)"
+                                x-bind:class="{ 'active': sob }">
+                                <div class="img_card_blog">
+                                    <img src="./img/barco.png" alt="">
+                                </div>
+                                <div class="text_card_blog">
+                                    <h3 class="title_cards_blog">Servicios y Suministros</h3>
+                                    <p>Nuestro departamento de Compra y Venta le garantiza un acompañamiento
+                                        permanente
+                                        durante
+                                        el proceso de despacho a nuestros posibles clientes y así brindarle
+                                        tranquilidad
+                                        y
+                                        seguridad hasta la entrega parcial y total de su compra.
+                                    </p>
+                                    <a style="cursor: pointer;" x-on:click="showNav('sob')"
+                                        x-bind:class="{ 'active': sob }" class="read_more">Ver más...</a>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="blog_wave" style="overflow: hidden;"><svg viewBox="0 0 500 150"
+                            preserveAspectRatio="none" style="height: 100%; width: 100%;">
+                            <path
+                                d="M0.00,49.98 C149.99,150.00 349.20,-49.98 500.00,49.98 L500.00,150.00 L0.00,150.00 Z"
+                                style="stroke: none; fill: #fff;"></path>
+                        </svg></div>
+                </div>
+
+                <div class="our_services">
+                    <div class="services container">
+                        <h1 class="subtitle"> Como lo hacemos? </h1>
+                        <p class="about_paragraph">Trabajamos con dedicación y profesionalismo, para
+                            incorporar
+                            y fortalecer los valores que nos definen como empresa. Descubre nuestro compromiso
+                            con la excelencia y la integridad en cada paso de nuestro proceso empresarial</p>
+                        <div class="container_cards_services">
+                               
+                            <div class="cards_services">
+                                <div class="card">
+                                    <span class="span-cards">
+                                        <a href="" class="fa-solid fa-ship icon-card"></a>
+                                    </span>
+                                    <h2>Con compromiso</h2>
+                                    <p>Innovamos en servicio, en propuestas para llegar cada día a más personas con
+                                        la
+                                        determinación de impactar positivas a quienes necesitan soluciones a medida
+                                    </p>
+                                </div>
+                                <div class="card">
+
+                                    <span class="span-cards">
+                                        <a href="" class="fa-solid fa-truck icon-card"></a>
+
+                                    </span>
+                                    <h2>Con talento</h2>
+                                    <p>Comprometidos con el crecimiento y bienestar de nuestra comunidad, invertimos
+                                        en
+                                        la
+                                        formación y desarrollo integral de las personas. Esta dedicación garantiza a
+                                        nuestros
+                                        clientes un entorno donde se valoran la ética, el profesionalismo y la
+                                        calidad
+                                        de
+                                        servicio.</p>
+                                </div>
+                                <div class="card">
+                                    <span class="span-cards">
+                                        <a href="" class="fa-solid fa-plane icon-card"></a>
+                                    </span>
+                                    <h2>Con solidaridad</h2>
+                                    <p>Sembramos deseos de superación para todas las personas. Hacemos posible la
+                                        dignificación
+                                        del esfuerzo del ser humano, y crecemos con ellos en sus aspiraciones. Con
+                                        absoluta
+                                        firmeza aramos el camino de la Integridad y empatía que nos caracteriza,
+                                        pues
+                                        inv global
+                                        Mana nace de la prosperidad de la constancia, fe , perseverancia y el
+                                        trabajo en
+                                        equipo
+                                    </p>
+                                </div>
+                                <div class="card">
+
+                                    <span class="span-cards">
+                                        <a href="" class="fa-solid fa-earth-americas icon-card"></a>
+                                    </span>
+                                    <h2>Con consecuencia</h2>
+                                    <p>Nos sumamos a los desafíos actuales:
+                                        Creamos la huella del progreso sostenible que el futuro demanda en el
+                                        presente.
+                                        Nuestra
+                                        política de RSC está basada en la trascendencia. Es por ello que apostamos
+                                        por
+                                        el hacer
+                                        desde nuestras filiales, y siendo además colaboradores activos en
+                                        iniciativas de
+                                        bienestar social y ambiental</p>
+                                </div>
+                                <div class="card">
+
+                                    <span class="span-cards">
+                                        <a href="" class="fa-solid fa-plane-arrival icon-card"></a>
+
+                                    </span>
+                                    <h2>Con responsabilidad</h2>
+                                    <p>Forjamos voluntades y el poder de transformación que permite que todo sea
+                                        posible. Somos
+                                        responsables de la tranquilidad que sentirán los clientes , de la confianza
+                                        depositada
+                                        por nuestros inversores y aliados en nuestra labor , y de asegurar la
+                                        sostenibilidad y
+                                        rendimiento de los medios de producción</p>
+                                </div>
+                            </div>
+
+
+                        </div>
+
+                    </div>
+                </div>
+
+            </section>
+        </div>
+
+        <div x-show="sob">
+            <section id="sob">
+                <!-- Contenido de la sección "sob" -->
+                <section class=" tabs">
+                    <ul class="tabs__header" style="padding-left: initial;  list-style-type: none;">
+                        <li class="tabs__header--title js-tabs-title active" data-tab="#tab-1">Ventajas</li>
+                        <li class="tabs__header--title js-tabs-title" data-tab="#tab-2">Servicios</li>
+                        <li class="tabs__header--title js-tabs-title" data-tab="#tab-3"> Visión</li>
+                        <li class="tabs__header--title js-tabs-title" data-tab="#tab-4">Misión</li>
+                        <li class="tabs__header--title js-tabs-title" data-tab="#tab-5">Propósito</li>
+                        <li class="tabs__header--title js-tabs-title" data-tab="#tab-6"> Compromiso Social</li>
+                    </ul>
+                    <div class="tabs__underline js-tabs-underline"></div>
+                    <article class="tabs__content js-tabs-content active" id="tab-1">
+                        <div class="about container">
+
+                            <div id="ventajas" class="about_texts about_texts_left">
+                                <h2 class="subtitle">Ventajas Global Maná, C.A.</h2>
+                                <p class="about_paragraph">Contamos con una empresa legal registrada con operaciones en Venezuela.</p>
+                                <p class="about_paragraph">Tenemos profesionales altamente calificados.</p>
+                                <p class="about_paragraph">Manejamos una amplia cartera de clientes.</p>
+                                <p class="about_paragraph">Nuestro despacho es amplio y permite expansión de servicios a nivel nacional e internacional.</p>
+                                <p class="about_paragraph">Contamos con tecnología, manejo de redes y presencia en internet a través de nuestra página web: <a style="color: #fff;" href="https://globalmana.online" target="_blank">https://globalmana.online</a></p>
+                            </div>
+                            <div class="about_img about_img--right">
+                                <img class="about_picture" src="./img/ventajas.jpg" alt="">
+                            </div>
+                        </div>
+                    </article>
+                    <article class="tabs__content js-tabs-content" id="tab-2">
+                        <div class="about container">
+                            <div class="about_img about_img--left">
+                                <img class="about_picture" src="./img/8.png" alt="">
+                            </div>
+                            <div id="propuesta" class="about_texts about_texts_right">
+                                <h2 class="subtitle">Servicios y Suministros
+                                </h2>
+
+                                <p class="about_paragraph">- Nuestro departamento de Compra y Venta le garantiza un
+                                    acompañamiento
+                                    permanente durante el proceso de despacho a nuestros posibles clientes y así
+                                    brindarle
+                                    tranquilidad
+                                    y seguridad hasta la entrega parcial y total de su compra.
+                                </p>
+
+                                <p class="about_paragraph">- Todos los productos cuentan con garantías, precios
+                                    diferenciados
+                                    gracias al
+                                    acceso a distintos mercados Internacionales y Nacionales.
+                                </p>
+
+
+                                <p class="about_paragraph">- Todas nuestras soluciones incluyen tecnología, innovación y
+                                    respeto
+                                    al
+                                    medio ambiente.
+                                </p>
+                            </div>
+
+                        </div>
+                    </article>
+                    <article class="tabs__content js-tabs-content" id="tab-3">
+                        <div class="about container">
+                            <div id="vision" class="about_texts about_texts_left">
+                                <h2 class="subtitle">VISIÓN
+                                </h2>
+                                <p class="about_paragraph">Ser una empresa acreditada a nivel nacional e internacional para el abastecimiento de alimentos perecederos y no perecederos de consumo humano y animal, entre otros; con un reconocido compromiso ético, estrictos valores y alta calidad de servicio.
+                                </p>
+                            </div>
+                            <div class="about_img about_img--right">
+                                <img class="about_picture" src="./img/visioon.png" alt="">
+                            </div>
+
+                        </div>
+                    </article>
+                    <article class="tabs__content js-tabs-content" id="tab-4">
+                        <div class="about container">
+
+                            <div class="about_img about_img--left">
+                                <img class="about_picture" src="./img/mision.jpg" alt="">
+                            </div>
+                            <div id="mision" class="about_texts about_texts_right">
+                                <h2 class="subtitle">MISIÓN
+                                </h2>
+                                <p class="about_paragraph">
+                                    Somos una empresa de alimentos cuyo compromiso es brindar servicios de calidad, excelentes productos, buenos precios y en pro de impactar positivamente al ambiente.
+                                </p>
+                            </div>
+
+                        </div>
+                    </article>
+                    <article class="tabs__content js-tabs-content" id="tab-5">
+                        <div class="about container">
+                            <div id="proposito" class="about_texts about_texts_left">
+                                <h2 class="subtitle">PROPÓSITO
+                                </h2>
+                                <p class="about_paragraph">Buscar, consolidar y mantener un equipo de profesionales para abordar con éxito nuestra cartera de clientes y ofrecer servicios de calidad en un entorno de respeto, colaboración y confianza mutua.
+                                </p>
+                            </div>
+                            <div class="about_img about_img--right">
+                                <img class="about_picture" src="./img/teamwork-3213924_640.jpg" alt="">
+                            </div>
+
+                        </div>
+                    </article>
+                    <article class="tabs__content js-tabs-content" id="tab-6">
+                        <div class="about container">
+
+                            <div class="about_img about_img--left">
+                                <img class="about_picture" src="./img/comunidad.png" alt="">
+                            </div>
+                            <div id="compromiso" class="about_texts about_texts_right">
+                                <h2 class="subtitle">Compromiso Social
+                                </h2>
+                                <p class="about_paragraph">Estamos comprometidos con el desarrollo socioeconómico de
+                                    Venezuela y trabajamos en solidaridad con organizaciones sin fines de lucro para
+                                    potenciar el trabajo en las comunidades, hospitales, etc. Contamos con voluntariado
+                                    corporativo que es cada vez más común y evidencia de la provechosa relación entre
+                                    compañías y sociedad civil, generando un impacto positivo en la sociedad.
+                                </p>
+                            </div>
+
+                        </div>
+                    </article>
+                </section>
+            </section>
+        </div>
+
+        <div x-show="cta">
+            <div id="cta">
+                <!-- Contenido de la sección "cta" -->
+                <div class="about container">
+                    <div class="about_texts">
+                        <h2 class="subtitle">Ubícanos
+                        </h2>
+                        <p class="about_paragraph">Av. Pedro Russo Ferrer con Av. Carlos Domínguez, Galpón 36, Zona
+                            Industrial
+                            El Tambor, Los Teques Edo. Miranda.
+                        </p>
+                        <p>
+                            Móvil: +58 424-2480644
+                        </p>
+                        <p>
+                            Correo corporativo: info@globalmanaca.com
+                        </p>
+                        <p>
+                            Certificado de registro como importador. N• RI-01782
+                        </p>
+                    </div>
+
+                    <div class="about_img about_img--right">
+                        <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m26!1m12!1m3!1d490.60301886814057!2d-67.03428238072699!3d10.3559416038796!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m11!3e0!4m5!1s0x8c2a8cef3229b6c9%3A0x99bc8bba11a6c53d!2sAvenida%20Pedro%20Russo%20Ferrer%2C%20Los%20Teques%2C%20Miranda%2C%20Venezuela!3m2!1d10.352722199999999!2d-67.02758039999999!4m3!3m2!1d10.3562212!2d-67.0343438!5e0!3m2!1ses!2s!4v1701914685792!5m2!1ses!2s"
+                            width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                            referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div x-show="serv">
+            <section id="serv">
+
+                <div class="services_G slider-section">
+                    <div class="slider-container">
+                        <div class="container_cards_blog slider-content">
+                            <div class="card_blog review-card" x-on:click="showNav('cta'); scrollTo('cta',80)"
+                                x-bind:class="{ 'active': cta }">
+                                <div class="img_card_blog">
+                                    <img src="./img/2.png" alt="">
+                                </div>
+                                <div class="text_card_blog">
+                                    <h3 class="title_cards_blog">Importación</h3>
+                                    <p>Importamos alimentos de primera calidad para consumo humano y animal.</p>
+                                </div>
+                            </div>
+
+                            <div class="card_blog review-card" x-on:click="showNav('sob'); scrollTo('sob',80)"
+                                x-bind:class="{ 'active': sob }">
+                                <div class="img_card_blog">
+                                    <img src="./img/1.png" alt="">
+                                </div>
+                                <div class="text_card_blog">
+                                    <h3 class="title_cards_blog">Exportación</h3>
+                                    <p>Exportamos tus productos a nivel mundial con el compromiso y fidelidad de
+                                        siempre.</p>
+                                </div>
+                            </div>
+                            <div class="card_blog review-card" x-on:click="showNav('sob'); scrollTo('sob',80)"
+                                x-bind:class="{ 'active': sob }">
+                                <div class="img_card_blog">
+                                    <img src="./img/4.png" alt="">
+                                </div>
+                                <div class="text_card_blog">
+                                    <h3 class="title_cards_blog">Agenciamiento Aduanero</h3>
+                                    <p>Efectuamos los procesos de Agenciamiento Aduanero de forma rapida y segura.</p>
+                                </div>
+                            </div>
+                            <div class="card_blog review-card" x-on:click="showNav('sob'); scrollTo('sob',80)"
+                                x-bind:class="{ 'active': sob }">
+                                <div class="img_card_blog">
+                                    <img src="./img/transportes.png" alt="">
+                                </div>
+                                <div class="text_card_blog">
+                                    <h3 class="title_cards_blog">Operaciones logistica de Fletamento</h3>
+                                    <p>Llegamos a cualquier punto de la geografía nacional e internacional.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="prev" onclick="prevSlide()">❮</button>
+                    <button class="next" onclick="nextSlide()">❯</button>
+                </div>
+
+
+
+            </section>
+        </div>
+
+        <a href="https://wa.me/584242480644" class="whatsapp-button" target="_blank">
+            <i class="fa-brands fa-whatsapp"></i>
+          </a>
+
+    </main>
+
+    <footer class="footer">
+        <div class="container footer_grid">
+            <nav class="nav nav--footer">
+
+                <a style="cursor: pointer;" x-on:click="showNav('ini'); scrollTo('ini', 80)"
+                    x-bind:class="{ 'active': ini }" class="nav_items nav_items_footer">Inicio</a>
+
+                <a style="cursor: pointer;" x-on:click="showNav('sob'); scrollTo('sob', 80)"
+                    x-bind:class="{ 'active': sob }" class="nav_items nav_items_footer">Sobre
+                    Nosotros</a>
+
+                <a style="cursor: pointer;" x-on:click="showNav('cta'); scrollTo('cta', 80)"
+                    x-bind:class="{ 'active': cta }" class="nav_items nav_items_footer">Contacto</a>
+
+                <a style="cursor: pointer;" x-on:click="showNav('serv'); scrollTo('serv', 80)"
+                    x-bind:class="{ 'active': serv }" class="nav_items nav_items_footer">Servicios</a>
+
+            </nav>
+            <section class="footer_contact">
+                <div class="footer_icons">
+                    <p style="color:#fff;">
+                        info@globalmanaca.com
+                    </p>
+                </div>
+            </section>
+        </div>
+    </footer>
+
+    <script src="slider.js"></script>
+    <script>
+        function navFunc() {
+            return {
+                cta: false,
+                ini: true,
+                sob: false,
+                serv: false,
+
+                showNav(ruta) {
+                    // Elimina la clase 'active' de todos los elementos de menú
+                    document.querySelectorAll('.nav_items').forEach(item => {
+                        item.classList.remove('active');
+                    });
+
+                    // Agrega la clase 'active' al elemento de menú seleccionado
+                    if (ruta === "cta") {
+                        this.cta = true;
+                        this.ini = false;
+                        this.sob = false;
+                        this.serv = false;
+                    } else if (ruta === "ini") {
+                        this.cta = false;
+                        this.ini = true;
+                        this.sob = false;
+                        this.serv = false;
+                    } else if (ruta === "sob") {
+                        this.cta = false;
+                        this.ini = false;
+                        this.sob = true;
+                        this.serv = false;
+                    } else if (ruta === "serv") {
+                        this.cta = false;
+                        this.ini = false;
+                        this.sob = false;
+                        this.serv = true;
+                    }
+                },
+
+                scrollTo(section, offsetPercentage) {
+                    // Obtén la altura de la ventana
+                    const windowHeight = window.innerHeight;
+
+                    // Calcula el offset en función del porcentaje de la altura de la ventana
+                    const offset = windowHeight * (offsetPercentage / 100);
+
+                    // Hace scroll hacia el elemento con el nuevo offset
+                    window.scrollTo({
+                        top: document.getElementById(section).offsetTop + offset,
+                        behavior: 'smooth'
+                    });
+
+                    this.showNav(section);
+                }
+            };
+        }
+
+      /* Slider Servivces */
+
+        let currentIndex = 0;
+
+        function nextSlide() {
+            currentIndex = (currentIndex + 1) % 6; // Adjust the number based on the number of cards
+            updateSlider();
+        }
+
+        function prevSlide() {
+            currentIndex = (currentIndex - 1 + 6) % 6; // Adjust the number based on the number of cards
+            updateSlider();
+        }
+
+        function updateSlider() {
+            const sliderContent = document.querySelector(".slider-content");
+            const cardWidth =
+                document.querySelector(".review-card").offsetWidth + 20; // Adjusted width including margin
+            sliderContent.style.transform = `translateX(${-currentIndex * cardWidth
+                }px)`;
+        }
+    </script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const links = document.querySelectorAll('nav a');
+
+            links.forEach(link => {
+                link.addEventListener('click', scrollSmooth);
+            });
+
+            function scrollSmooth(e) {
+                e.preventDefault();
+
+                const targetId = this.getAttribute('href').substring(1);
+                const targetElement = document.getElementById(targetId);
+
+                window.scrollTo({
+                    top: targetElement.offsetTop,
+                    behavior: 'smooth'
+                });
+            }
+        });
+    </script>
+    <script src='https://code.jquery.com/jquery-2.2.4.min.js'></script>
+    <script type="text/javascript">
+        $('.js-tabs-title').on('click', function () {
+            var openTab = $(this).data('tab'),
+                linePosition = $(this).position().left;
+
+            $('.js-tabs-underline').css('transform', 'translateX(' + linePosition + 'px)');
+            $('.js-tabs-title').removeClass('active');
+            $(this).addClass('active');
+            $('.js-tabs-content').removeClass('active');
+            $(openTab).addClass('active');
+        });
+    </script>
+    <script>
+        function Slider() {
+            const carouselSlides = document.querySelectorAll('.slide');
+            const btnPrev = document.querySelector('.prev');
+            const btnNext = document.querySelector('.next');
+            const dotsSlide = document.querySelector('.dots-container');
+            let currentSlide = 0;
+
+            const activeDot = function (slide) {
+                document.querySelectorAll('.dot').forEach(dot => dot.classList.remove('active'));
+                document.querySelector(`.dot[data-slide="${slide}"]`).classList.add('active');
+            };
+            activeDot(currentSlide);
+
+            const changeSlide = function (slides) {
+                carouselSlides.forEach((slide, index) => (slide.style.transform = `translateX(${100 * (index - slides)}%)`));
+            };
+            changeSlide(currentSlide);
+
+            btnNext.addEventListener('click', function () {
+                currentSlide++;
+                if (carouselSlides.length - 1 < currentSlide) {
+                    currentSlide = 0;
+                };
+                changeSlide(currentSlide);
+                activeDot(currentSlide);
+            });
+            btnPrev.addEventListener('click', function () {
+                currentSlide--;
+                if (0 >= currentSlide) {
+                    currentSlide = 0;
+                };
+                changeSlide(currentSlide);
+                activeDot(currentSlide);
+            });
+
+            dotsSlide.addEventListener('click', function (e) {
+                if (e.target.classList.contains('dot')) {
+                    const slide = e.target.dataset.slide;
+                    changeSlide(slide);
+                    activeDot(slide);
+                }
+            });
+        };
+        Slider();
+
+    </script>
+
+    <script src="https://kit.fontawesome.com/9adcf8f520.js" crossorigin="anonymous"></script>
+</body>
+
+</html>
